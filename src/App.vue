@@ -2,10 +2,12 @@
 	<div>
 		<transition name="router-fade" mode="out-in">
 			<keep-alive>
+        <!-- 这里是会被缓存的视图组件，比如 Home！ -->
 			    <router-view v-if="$route.meta.keepAlive"></router-view>
 			</keep-alive>
     </transition>
     <transition name="router-fade" mode="out-in">
+      <!-- 这里是不被缓存的视图组件，比如 Edit！ -->
 			<router-view v-if="!$route.meta.keepAlive"></router-view>
 		</transition>
 		<svg-icon></svg-icon>
@@ -19,9 +21,7 @@
             svgIcon
         },
   	}
-
 </script>
-
 <style lang="scss">
   	@import './style/common';
 	.router-fade-enter-active, .router-fade-leave-active {
