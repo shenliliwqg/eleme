@@ -21,6 +21,7 @@ const router = new VueRouter({
 	    if (savedPosition) {
 		    return savedPosition
 		} else {
+            //刷新当前页时/返回该页时 页面的位置保持不变
 			if (from.meta.keepAlive) {
 				from.meta.savedPosition = document.body.scrollTop;
 			}

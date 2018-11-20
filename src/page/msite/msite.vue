@@ -1,8 +1,8 @@
 <template>
     <div>
-    	<head-top signin-up='msite'>
+    	<headTop signin-up='msite'>
     		<router-link :to="'/search/geohash'" class="link_search" slot="search">
-	    		<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
+	    		<svg width="100%" height="100%" version="1.1">
 	    			<circle cx="8" cy="8" r="7" stroke="rgb(255,255,255)" stroke-width="1" fill="none"/>
 	    			<line x1="14" y1="14" x2="20" y2="20" style="stroke:rgb(255,255,255);stroke-width:2"/>
 	    		</svg>
@@ -10,7 +10,7 @@
 			<router-link to="/home" slot="msite-title" class="msite_title">
 				<span class="title_text ellipsis">{{msiteTitle}}</span>
 			</router-link>
-    	</head-top>
+    	</headTop>
     	<nav class="msite_nav">
     		<div class="swiper-container" v-if="foodTypes.length">
 		        <div class="swiper-wrapper">
@@ -34,10 +34,10 @@
 	    		</svg>
 	    		<span class="shop_header_title">附近商家</span>
 	    	</header>
-	    	<shop-list v-if="hasGetData" :geohash="geohash"></shop-list>
+	    	<shopList v-if="hasGetData" :geohash="geohash"></shopList>
     	</div>
-    	<foot-guide></foot-guide>
-    </div>    
+    	<footGuide></footGuide>
+    </div>
 </template>
 
 <script>

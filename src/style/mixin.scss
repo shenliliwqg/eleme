@@ -4,8 +4,7 @@ $fc:#fff;
 
 // 背景图片地址和大小
 @mixin bis($url) {
-	background-image: url($url);
-	background-repeat: no-repeat;
+	background-image: url($url) no-repeat;
 	background-size: 100% 100%;
 }
 

@@ -1,3 +1,4 @@
+//这里面的fetch可以命名为其他的名称 只要与下面的调用的方法名称保持一致即可
 import fetch from '../config/fetch'
 import {getStore} from '../config/mUtils'
 
@@ -23,9 +24,11 @@ export const hotcity = () => fetch('/v1/cities', {
  * 获取首页所有城市
  */
 
-export const groupcity = () => fetch('/v1/cities', {
+export const groupcity = function(){
+ return  fetch('/v1/cities', {
 	type: 'group'
-});
+})
+};
 
 
 /**
